@@ -1,0 +1,23 @@
+import React from 'react';
+
+import { pricing } from '../data';
+
+// import components
+import PlanList from './PlanList'
+
+const Pricing = () => {
+  const {icon, title, plans } = pricing;
+  return (
+    <>
+    <section id='pricing' className='section'>
+    <div data-aos='fade-up'  data-aos-offset="200" data-aos-delay="200" className='section-title-group max-w-[540px]'>
+      <img src={icon} alt="" />
+      <h2 className='h2'>{title} <span className='text-primary-200'>.</span></h2>
+    </div> 
+    <PlanList plans={plans}/>
+    </section>
+    </>
+  );
+};
+
+export default Pricing;
